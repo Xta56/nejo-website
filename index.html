@@ -200,5 +200,16 @@ footer{border-top:1px solid var(--line);padding:34px 0 90px;color:#777;font-size
     <span>+234 913 927 6827 · Worldwide delivery</span>
   </div>
 </footer>
+ <script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('a[href*="wa.me/"]').forEach(function (button) {
+    button.addEventListener('click', function () {
+      if (window.ttq) {
+        ttq.track('PlaceAnOrder');
+      }
+    });
+  });
+});
+</script>
 </body>
 </html>
